@@ -13,8 +13,16 @@ persona3 = Persona("Natanael",32)
 basededatos.session.add(persona3)
 basededatos.session.commit()
 
+#consultas
 personas = Persona.query.all() # consultar todos los elemento que estan en esa tabla
 print("Consultar todas las personas")
 print(personas)
 
 
+filtro1 = Persona.query.filter_by(nombre="Antonio") #una consulta por valores por columna
+print("Filtro por elemento")
+print(filtro1.all())
+
+seleccion1 = Persona.query.get(2)
+print("Busqueda por id")
+print(seleccion1)
