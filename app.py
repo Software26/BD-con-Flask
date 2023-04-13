@@ -28,7 +28,5 @@ class Persona(basededatos.Model):
         self.edad = edad
        
     def __repr__(self):
-        texto = "Persona : nombre ={} y edad={}".format()
-        return super().__repr__() 
-        
-        super().__init__()
+        texto = "Persona : nombre ={} y edad={}".format(self.nombre,self.edad)
+        return texto
