@@ -10,4 +10,6 @@ print(directorio)
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(directorio,'datos.sqlite')
-app.config['SQLALCHEMY_tract'] 
+app.config['SQLALCHEMY_TRACK_MOODIFICACIONS'] = False
+
+basededatos = SQLAlchemy(app)
