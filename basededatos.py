@@ -26,3 +26,6 @@ print(filtro1.all())
 seleccion1 = Persona.query.get(2)
 print("Busqueda por id")
 print(seleccion1)
+
+persona = Persona.query.get(1)
+persona.edad = 45
