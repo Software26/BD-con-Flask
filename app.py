@@ -27,11 +27,11 @@ class Persona(basededatos.Model):
     def __init__(self,nombre,edad,color):
         self.nombre = nombre
         self.edad = edad
+        self.color = color
        
     def __repr__(self):
         texto = "Persona : nombre ={} y edad={}".format(self.nombre,self.edad,self.color)
         return texto
     
 if __name__ == '__main__':
-    with app.app(debug=True):
-        app.run()
+    
