@@ -30,8 +30,8 @@ class Persona(basededatos.Model):
         self.color = color
        
     def __repr__(self):
-        texto = "Persona : nombre ={} y edad={}".format(self.nombre,self.edad,self.color)
+        texto = "Persona : nombre ={} y edad={} color={}".format(self.nombre,self.edad,self.color)
         return texto
     
 if __name__ == '__main__':
-    
+    app
