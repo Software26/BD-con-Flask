@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 #--- Aqui tenemos la ruta de donde esta el archivo el print es parque lo veamos por cosola
 directorio = os.path.abspath(os.path.dirname(__file__))
@@ -13,6 +14,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(directorio,'
 app.config['SQLALCHEMY_TRACK_MOODIFICACIONS'] = False
 
 basededatos = SQLAlchemy(app)
+
+Migrate(app,basededatos)
 
 #creaccion del modelo o base de datos
 
@@ -34,4 +37,4 @@ class Persona(basededatos.Model):
         return texto
     
 if __name__ == '__main__':
-    app
+    app.run(debug=True)
