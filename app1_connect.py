@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy #Library is for connect to Database
 directory = os.path.abspath(os.path.dirname(__file__))
 print(directory)
 
-app = Flask(__name__)
+app=Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(directory,'data.sqlite') # configure for file where is the direction of the app in database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
