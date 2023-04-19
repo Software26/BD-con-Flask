@@ -8,7 +8,7 @@ person2 = Person("Antonio",28)
 
 database.session.add_all([person1,person2]) #add all elements to table
 database.session.commit()
-
+'''
 # Assignment one of person
 person3 = Person("Maria",30)
 database.session.add(person3) # add value to database
@@ -48,3 +48,4 @@ print(Persons)
 # add in query add
 #Filter_by = Filter the specific element
 # commit = updata the table
+'''
