@@ -15,19 +15,18 @@ database = SQLAlchemy(app)
 # database model creation
 
 class Person(database.Model): 
-    __tablename__ = 'Person' # Name table Person
+    __tablename__ = 'Persons' # Name table Person
     
     # four fields for table
     id = database.Column(database.Integer, primary_key =  True) # 
     name = database.column(database.Text)
     age1 = database.Column(database.Integer)
-    color = database.Column(database.Text)
+    
    #---------------------------------------- 
-    def __init__(self,name,age,color):
+    def __init__(self,name,age):
         self.name = name
-        self.age = age  
-        self.color  = color
+        self.age1 = age  
         
     def __repr__(self):
-        text = "Person : name = {}, age ={} and color = {}".format(self.name,self.age,self.color)
-        return 
+        text = "Person : name = {}, age ={} and color = {}".format(self.name,self.age1)
+        return text
