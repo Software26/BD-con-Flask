@@ -22,7 +22,7 @@ print(peaple)
 # filter values by column
 filter1 = Person.query.filter_by(name="Antonio")
 print("Filter by name = Antonio")
-print(filter1)
+print(filter1.all())
 
 # Query by Filter of selection element
 select1 = Person.query.get(2)
