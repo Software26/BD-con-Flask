@@ -19,8 +19,8 @@ class Person(database.Model):
     
     # four fields for table
     id = database.Column(database.Integer, primary_key = True) 
-    name = database.Column(database.Text)
-    age = database.Column(database.Integer)
+    name = database.Column(database.String(50))
+    age = database.Column(database.Integer(2))
     
    #---------------------------------------- 
     def __init__(self,name,age):
@@ -30,3 +30,6 @@ class Person(database.Model):
     def __repr__(self):
         text = "Person : name = {}, age ={} and color = {}".format(self.name,self.age)
         return text
+    
+if __name__ == '__main__':
+    app.run(debug=True)
