@@ -15,9 +15,9 @@ database.session.add(person3) # add value to database
 database.session.commit()
 
 # In the table person query all elements 
-peaple = Person.query.all()
+Persons = Person.query.all()
 print("Consult all the People of table")
-print(peaple)
+print(Persons)
 
 # filter values by column
 filter1 = Person.query.filter_by(name="Antonio")
@@ -40,9 +40,9 @@ database.session.delete(delete_person)
 database.session.commit()
 print("This person was deleted {}".format(delete_person))
 
-peaple = Person.query.all()
+Persons = Person.query.all()
 print("Everybody")
-print(peaple)
+print(Persons)
 
 
 # add in query add
