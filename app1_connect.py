@@ -18,15 +18,15 @@ class Person(database.Model):
     __tablename__ = 'Persons' # Name table Person
     
     # four fields for table
-    id = database.Column(database.Integer, primary_key = True) # 
+    id = database.Column(database.Integer, primary_key = True) 
     name = database.Column(database.Text)
-    age1 = database.Column(database.Integer)
+    age = database.Column(database.Integer)
     
    #---------------------------------------- 
     def __init__(self,name,age1):
         self.name = name
-        self.age1 = age1  
+        self.age1 = age  
         
     def __repr__(self):
-        text = "Person : name = {}, age ={} and color = {}".format(self.name,self.age1)
+        text = "Person : name = {}, age ={} and color = {}".format(self.name,self.age)
         return text
