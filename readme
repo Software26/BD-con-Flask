@@ -1,5 +1,0 @@
-
-pip install Migrate # migrate library
-set FLASK_APP=app.py 
-flask bd init
-flask db upgrade # updating the database permanently creates the file datos.sqlite
