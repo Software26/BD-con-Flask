@@ -38,7 +38,7 @@ database.session.commit()
 delete_person = Person.query.get(3)
 database.session.delete(delete_person)
 database.session.commit()
-print("this person was deleted {}".format(delete_person))
+print("This person was deleted {}".format(delete_person))
 
 peaple = Person.query.all()
 print("Everybody")
