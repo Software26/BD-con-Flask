@@ -30,7 +30,7 @@ print("Search by id")
 print(select1)
 
 person4 = Person.query.get(1)
-person4.age1 = 45 
+person4.age = 45 
 database.session.add(person4)
 database.session.commit()
 
