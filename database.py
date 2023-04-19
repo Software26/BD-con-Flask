@@ -1,5 +1,7 @@
+from flask import Flask
 from app1_connect import database, Person
 
+app = Flask(__name__)
 database.create_all() #create table
 
 # assignment two of values 
@@ -8,7 +10,7 @@ person2 = Person("Antonio",28)
 
 database.session.add_all([person1,person2]) #add all elements to table
 database.session.commit()
-'''
+
 # Assignment one of person
 person3 = Person("Maria",30)
 database.session.add(person3) # add value to database
@@ -48,4 +50,5 @@ print(Persons)
 # add in query add
 #Filter_by = Filter the specific element
 # commit = updata the table
-'''
+if __name__ == '__main__':
+    app.run(debug=True)
