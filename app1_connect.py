@@ -23,9 +23,9 @@ class Person(database.Model):
     age1 = database.Column(database.Integer)
     
    #---------------------------------------- 
-    def __init__(self,name,age):
+    def __init__(self,name,age1):
         self.name = name
-        self.age1 = age  
+        self.age1 = age1  
         
     def __repr__(self):
         text = "Person : name = {}, age ={} and color = {}".format(self.name,self.age1)
