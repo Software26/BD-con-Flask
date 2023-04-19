@@ -18,8 +18,8 @@ class Person(database.Model):
     __tablename__ = 'Persons' # Name table Person
     
     # four fields for table
-    id = database.Column(database.Integer, primary_key =  True) # 
-    name = database.column(database.Text)
+    id = database.Column(database.Integer, primary_key = True) # 
+    name = database.Column(database.Text)
     age1 = database.Column(database.Integer)
     
    #---------------------------------------- 
